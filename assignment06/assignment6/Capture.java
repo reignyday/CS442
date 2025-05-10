@@ -27,9 +27,9 @@ public class Capture implements Command {
 		// and replace where it was with the lost piece.
 		int to = undoICCF % 100;
 		int from = undoICCF / 100;
-		Piece p = board.getPiece(to);
-		board.setPiece(to, lost);
-		board.setPiece(from, p);
+		Piece p = board.getPiece(from);
+		board.setPiece(from, lost);
+		board.setPiece(to, p);
 	}
 }
 

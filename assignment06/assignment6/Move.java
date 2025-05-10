@@ -25,8 +25,8 @@ public class Move implements Command {
 		// and replace where it was with a non-piece.
 		int to = undoICCF % 100;
 		int from = undoICCF / 100;
-		Piece p = board.getPiece(to);
-		board.setPiece(to, board.piece.get("--"));
-		board.setPiece(from, p);
+		Piece p = board.getPiece(from);
+		board.setPiece(from, board.piece.get("--"));
+		board.setPiece(to, p);
 	}
 }
